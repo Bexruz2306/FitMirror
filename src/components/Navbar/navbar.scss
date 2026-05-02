@@ -1,0 +1,503 @@
+.navbar1{
+    position: fixed;
+    top: 0px;
+    z-index: 50;
+   
+    border-bottom: 1px solid var(--border-light);
+    backdrop-filter: blur(19px) saturate(160%);
+    background-color: var(--bg-secondary-color) !important;
+    
+    .bg-body-tertiary{
+        background-color: var(--bg-secondary-color) !important;
+    }
+    
+    .nav-link , .navbar-brand{
+        color: var(--text-main) !important;
+    }
+    
+    .star {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 8px;
+        
+        img{ 
+            color: var(--primary-color) !important;
+            width: 24px !important;
+            height: 24px !important;
+        }
+    }
+    
+    .star_box{
+        display: flex;
+        align-items: center;
+    }
+    
+    .fitmirror{
+        font-size: 30px;
+        font-weight: 600;
+    }
+    
+    .btn{
+        background-color: var(--primary-color) !important;
+        border: none;
+        color: var(--text-main);
+    }
+    
+    .navbar-nav{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 2rem;
+    }
+    
+    width: 100%;
+    
+    &_container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between !important;
+        width: 100%;
+    }
+    
+    &_container_box {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+    }
+    
+    .nav-link{
+        color: var(--text-secondary) !important;
+        padding: 0 !important;
+        margin-left: 15px;
+    } 
+    
+    .active{
+        color: var(--text-main) !important;
+    }
+    
+    // Bootstrap Toggle Button Customization
+    .navbar-toggler {
+        border: none;
+        padding: 0.25rem 0.75rem;
+        background-color: transparent !important;
+        position: relative;
+        width: 2rem;
+        height: 2rem;
+        
+        &:focus {
+            box-shadow: none;
+            outline: none;
+        }
+        
+        // Hide default bars
+        .navbar-toggler-icon {
+            background-image: none !important;
+            width: 1.5rem;
+            height: 1.5rem;
+            position: relative;
+            display: inline-block;
+            
+            &::before,
+            &::after {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 3px;
+                background-color: var(--text-main);
+                border-radius: 3px;
+                transition: all 0.3s ease;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            
+            &::before {
+                transform: translate(-50%, -50%) rotate(45deg);
+            }
+            
+            &::after {
+                transform: translate(-50%, -50%) rotate(-45deg);
+            }
+        }
+        
+        // X Animation when expanded (same as collapsed)
+        &:not(.collapsed) .navbar-toggler-icon {
+            &::before {
+                transform: translate(-50%, -50%) rotate(45deg);
+            }
+            
+            &::after {
+                transform: translate(-50%, -50%) rotate(-45deg);
+            }
+        }
+    }
+    
+    .navbar-collapse {
+        background-color: var(--bg-color);
+        border-radius: 0 0 15px 15px;
+        margin-top: 0.5rem;
+        transition: all 0.3s ease;
+    }
+}
+.navbar_container{
+    &_box{
+        width: 100%;
+        display: flex;
+        justify-content: end !important;
+        &_pricing{
+            color: var(--text-main) !important;
+            font-size: 14px;
+            text-decoration: none;
+            padding: 10px 15px;
+            background-color: var(--primary-color) !important;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            
+            &:hover{
+                background-color: var(--primary-border);
+                box-shadow: rgba(152, 16, 250, 0.3) 0px 14px 28px, rgba(152, 16, 250, 0.22) 0px 10px 10px;
+                transform: translateY(-2px);
+            }
+        }
+    }
+    width: 100%;
+    justify-content: space-between !important;
+}
+
+@media (max-width: 768px) {
+    .container, .container-sm{
+        max-width: 100% !important;
+    }
+    
+    .navbar1 {
+        &_container {
+            padding: 0.5rem 1rem;
+            gap: 0.5rem;
+        }
+        
+        &_container_box {
+            gap: 0.5rem;
+        }
+        
+        .fitmirror {
+            font-size: 24px;
+        }
+        
+        .navbar-toggler {
+            order: -1;
+        }
+        
+        .navbar-collapse {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background-color: var(--bg-secondary-color);
+            border-radius: 0;
+            padding: 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+    }
+    
+    .navbar-nav {
+        flex-direction: column;
+        align-items: flex-start !important;
+        gap: 1rem !important;
+    }
+    
+    .nav-link {
+        margin-left: 0 !important;
+    }
+    
+    .profile {
+        margin-left: 0 !important;
+    }
+    
+    .login_profile {
+        margin-left: 0 !important;
+        a {
+            padding: 8px 12px;
+            font-size: 0.9rem;
+        }
+    }
+    
+    .ant-dropdown-menu {
+        width: 280px !important;
+        font-size: 16px !important;
+        li {
+            font-size: 16px !important;
+        }
+    }
+    .navbar_container_box_pricing{
+        margin-right: 0.5rem;
+        padding: 5px 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.9rem;
+        border-radius: 8px;
+    }
+    
+    .theme-toggle {
+        margin-left: 0 !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar1 {
+        &_container {
+            padding: 0.5rem 0.75rem;
+        }
+        
+        .fitmirror {
+            font-size: 18px;
+        }
+    }
+    
+    .profile {
+        margin-left: 0 !important;
+    }
+    
+    .login_profile {
+        margin-left: 0 !important;
+        a {
+            padding: 6px 10px;
+            font-size: 0.8rem;
+        }
+    }
+    
+    .ant-dropdown-menu {
+        width: 250px !important;
+        font-size: 14px !important;
+        padding: 10px !important;
+        li {
+            font-size: 14px !important;
+        }
+    }
+    
+    .profile_initials_circle {
+        width: 35px;
+        height: 35px;
+        font-size: 12px;
+    }
+    
+    .theme-toggle {
+        font-size: 18px !important;
+    }
+}
+ .profile{
+        margin-left: 0;
+        display: flex;
+        align-items: center;
+        
+        &_icon{
+            cursor: pointer;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            svg{
+                width: 100% !important;
+            }
+        }
+        &_user{
+            width: 30px;
+            color: var(--primary-color);
+            height: 30px;
+        }
+    }
+    
+.ant-dropdown css-dev-only-do-not-override-ch9ese css-var-root ant-dropdown-css-var ant-dropdown-placement-bottomLeft{
+    width: 400x !important;
+}
+
+.ant-dropdown-menu {
+    padding: 20px !important;
+    width: 300px !important;
+    background: var(--bg-secondary-color) !important;
+    backdrop-filter: blur(10px) !important;
+    border: 1px solid var(--border-light) !important;
+    color: var(--text-main) !important;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8) !important;
+    
+    li{
+        font-size: 20px !important;
+        font-weight: 500 !important;
+        color: var(--text-main) !important;
+        opacity: 0.6 !important ;
+        transition: all 0.3s ease !important;
+        
+        &:hover{
+            opacity: 1 !important;
+            color: var(--primary-color) !important;
+        }
+    }
+    
+    .ant-dropdown-menu-item-icon{
+        font-size: 24px !important;
+        margin-right: 14px !important;
+    }
+}
+
+.login_profile{
+    margin-left: 0;
+    a{
+        padding: 10px 15px;
+        background-color: var(--primary-color);
+        border-radius: 10px;
+        color: var(--text-main);
+        font-size: 1rem;
+        transition: all 0.3s ease;
+        display: inline-flex;
+        align-items: center;
+        
+        &:hover{
+            background-color: var(--primary-border);
+            box-shadow: rgba(152, 16, 250, 0.3) 0px 14px 28px, rgba(152, 16, 250, 0.22) 0px 10px 10px;
+            transform: translateY(-2px);
+        }
+    }
+}
+.nav-link{
+    .link_upolade{
+        a{
+            width: 120px !important;
+        }
+        color: var(--text-main) !important;
+        font-size: 1rem;
+        padding: 10px 15px;
+        background-color: var(--primary-color) !important;
+        border-radius: 10px;
+    }
+}
+
+// Language Dropdown Styling
+#language-dropdown {
+    padding: 0 !important;
+    
+    &::after {
+        display: none !important;
+    }
+    
+    &:hover {
+        color: var(--primary-color) !important;
+    }
+}
+
+// Theme Toggle Styling
+.theme-toggle {
+    cursor: pointer !important;
+    transition: all 0.3s ease;
+    
+    &:hover {
+        transform: rotate(20deg) scale(1.1);
+    }
+    
+    &:active {
+        transform: rotate(20deg) scale(0.95);
+    }
+}
+
+// Hide me-auto on mobile
+.me-auto {
+    display: none !important;
+}
+// Ikonkalar uchun umumiy stillar
+.navbar1 {
+  
+  // Asosiy profil aylanasi va ikonasi
+  .profile_icon {
+    border: 2px solid var(--primary-color);
+    padding: 5px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+
+    .profile_user {
+      font-size: 24px;
+      color: var(--primary-color);
+    }
+
+    &:hover {
+      background-color: var(--bg-highlight);
+      box-shadow: 0 0 10px var(--primary-color);
+    }
+  }
+}
+
+// Dropdown menyu ichidagi ikonkalarni rangi (Global stil)
+.ant-dropdown-menu {
+    .ant-dropdown-menu-item {
+        // Odatiy holatdagi ikonkalar
+        .anticon, svg {
+            color: var(--text-secondary) !important;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+        // Ustiga borganda (Hover)
+        &:hover {
+            .anticon, svg {
+                color: var(--primary-color) !important;
+            }
+        }
+
+        // Aynan Chiqish (Logout) ikonasi uchun
+        &.ant-dropdown-menu-item-danger {
+            .anticon, svg {
+                color: #ff4d4f !important;
+            }
+            &:hover {
+                background-color: rgba(255, 77, 79, 0.1) !important;
+            }
+        }
+    }
+}
+
+.profile_initials_circle {
+    width: 40px;
+    height: 40px;
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+
+    &:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 15px var(--primary-color);
+        border-color: var(--text-main);
+    }
+}
+
+// Dropdown menyu ichidagi header (user_info) stili
+.ant-dropdown-menu-item {
+    &-disabled {
+        background-color: transparent !important;
+        cursor: default !important;
+        
+        &:hover {
+            background-color: transparent !important;
+        }
+    }
+}
+
+.user-header-container {
+    padding: 10px 5px;
+    background-color: transparent; 
+}
+.navbar_container {
+    flex-wrap: nowrap !important;
+}
