@@ -1,0 +1,302 @@
+// --- Ranglar palitrasi va O'zgaruvchilar ---
+:root {
+  // Fon ranglari (Koinot mavzusi)
+  --bg-dark: #06090f; 
+  --bg-deep: #0a0e17;
+  
+  // Akcent ranglar (Neon Gradent)
+  --color-primary: #8a2be2; // Binafsha (Pro)
+  --color-secondary: #00bfff; // Och ko'k (Active)
+  --gradient-main: linear-gradient(135deg, #8a2be2 0%, #00bfff 100%);
+  
+  // Matn va Elementlar
+  --text-main: #ffffff;
+  --text-muted: #8b949e;
+  --glass-bg: rgba(255, 255, 255, 0.03); // Oynasimon fon
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --input-focus-shadow: rgba(0, 191, 255, 0.15);
+}
+
+// Global reset va shriftlar
+.login_box {
+  min-height: 100vh;
+  display: flex;
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  font-family: 'Poppins', sans-serif; // Zamonaviy shrift (agar o'rnatilgan bo'lsa)
+  overflow: hidden;
+  position: relative;
+
+  // --- Orqa fondagi dekorativ doiralar (Neon effekt) ---
+  &::before, &::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(120px);
+    opacity: 0.15;
+    z-index: 0;
+  }
+
+  &::before {
+    width: 400px;
+    height: 400px;
+    background: var(--color-primary);
+    top: -100px;
+    left: -100px;
+  }
+
+  &::after {
+    width: 350px;
+    height: 350px;
+    background: var(--color-secondary);
+    bottom: -50px;
+    right: -50px;
+  }
+}
+
+// --- Chap panel (Branding va Vizual) ---
+.login_box_top {
+  width: 40%;
+  min-height: 100vh;
+  background-color: var(--bg-deep);
+  border-right: 1px solid var(--glass-border);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  position: relative;
+  z-index: 1;
+  transition: all 0.4s ease;
+
+  .logo-icon {
+    width: 70px;
+    height: 70px;
+    background: var(--gradient-main);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+    box-shadow: 0 10px 30px rgba(138, 43, 226, 0.3);
+  }
+
+  .brand-name {
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: -1px;
+    background: var(--gradient-main);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+  }
+
+  .sidebar-subtitle {
+    font-size: 15px;
+    color: var(--text-muted) !important;
+    text-align: center;
+    line-height: 1.6;
+    max-width: 280px;
+  }
+}
+
+// --- O'ng panel (Login formasi va Glassmorphism) ---
+.login_box_bottom {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  position: relative;
+  z-index: 1;
+
+  .login-card {
+    width: 100%;
+    max-width: 420px;
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px); // Oyna effekti
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+    padding: 40px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px); // Kichik interaktiv effekt
+    }
+  }
+
+  .welcome-title {
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--text-main) !important;
+    margin-bottom: 8px !important;
+  }
+
+  .subtitle-text {
+    color: var(--text-muted) !important;
+    font-size: 14px;
+    margin-bottom: 35px;
+    display: block;
+  }
+}
+
+// --- Ant Design elementlarini xususiylashtirish ---
+
+// Input maydonlari
+.ant-input-affix-wrapper {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid var(--glass-border) !important;
+  border-radius: 12px !important;
+  padding: 12px 15px !important;
+  transition: all 0.3s;
+
+  input {
+    background: transparent !important;
+    color: var(--text-main) !important;
+    font-size: 14px;
+    
+    &::placeholder {
+      color: #555 !important;
+    }
+  }
+
+  .anticon {
+    color: var(--text-muted);
+    font-size: 16px;
+  }
+
+  &:hover {
+    border-color: rgba(0, 191, 255, 0.4) !important;
+  }
+
+  &-focused {
+    border-color: var(--color-secondary) !important;
+    box-shadow: 0 0 0 3px var(--input-focus-shadow) !important;
+  }
+}
+
+// Kirish tugmasi (Gradent effekt)
+.submit-btn {
+  height: 50px !important;
+  background: var(--gradient-main) !important;
+  border: none !important;
+  border-radius: 12px !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  color: white !important;
+  margin-top: 15px;
+  box-shadow: 0 5px 15px rgba(138, 43, 226, 0.2);
+  transition: all 0.3s ease !important;
+
+  &:hover {
+    box-shadow: 0 8px 25px rgba(138, 43, 226, 0.4) !important;
+    transform: translateY(-1px);
+  }
+
+  &:active {
+    transform: translateY(1px);
+  }
+}
+
+// Divider (Yoki)
+.ant-divider {
+  border-top-color: var(--glass-border) !important;
+  margin: 25px 0 !important;
+  
+  .ant-divider-inner-text {
+    color: var(--text-muted) !important;
+    font-size: 12px;
+    font-weight: 400;
+  }
+}
+
+// Parolni unutdingizmi?
+.forgot-password-link {
+  color: var(--color-secondary) !important;
+  font-size: 13px;
+  cursor: pointer;
+  transition: color 0.3s;
+
+  &:hover {
+    color: #fff !important;
+    text-decoration: underline;
+  }
+}
+
+// Google tugmasi markazda bo'lishi uchun
+.google-btn-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+// --- Media so'rovlar (Responsive Dizayn) ---
+
+@media (max-width: 1024px) {
+  .login_box_top {
+    width: 35%;
+    padding: 2rem;
+    
+    .brand-name { font-size: 28px; }
+  }
+}
+
+@media (max-width: 768px) {
+  .login_box {
+    flex-direction: column;
+    
+    // Telefonda chap panel yashiriladi
+    &_top {
+      display: none !important;
+    }
+
+    &_bottom {
+      width: 100%;
+      min-height: 100vh;
+      padding: 1rem;
+    }
+
+    // Kartani telefonda to'liq kenglikda qilish
+    .login-card {
+      padding: 30px 20px;
+      border-radius: 20px;
+      border: none;
+      background: transparent; // Telefonda soddaroq fon
+      box-shadow: none;
+      backdrop-filter: none;
+    }
+  }
+}
+.google-btn-container {
+  display: flex;
+  justify-content: center;
+  width: 100%; // Konteyner to'liq bo'lsin
+  margin-top: 10px;
+  margin-bottom: 20px;
+
+  & > div {
+    width: 100% !important; // Tugmaning o'zini to'liq kenglikka majburlash
+    display: flex;
+    justify-content: center;
+
+    iframe {
+      width: 100% !important; // Ichidagi Google iframe'ini ham kengaytirish
+    }
+  }
+}.welcome-title {
+  font-size: 32px !important; 
+  margin-bottom: 12px !important; // Pastdagi yozuv bilan masofa
+}
+
+.subtitle-text {
+  font-size: 15px !important;
+  margin-bottom: 30px !important; // Google tugmasi bilan masofa
+  opacity: 0.8;
+}
+.nsm7Bb-HzV7m-LgbsSe.JGcpL-RbRzK{
+    border-radius: 15px !important;
+}
+

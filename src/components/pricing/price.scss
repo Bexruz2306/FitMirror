@@ -1,0 +1,515 @@
+.pricing_page {
+    padding-top: 100px !important;
+    width: 100% !important;
+  background: var(--bg-color);
+  min-height: 100vh;
+  padding: 40px 24px;
+  margin: 0 auto;
+}
+
+.pricing_header {
+  text-align: center;
+  margin-bottom: 32px;
+
+  h1 {
+    color: var(--text-main);
+    font-size: 28px;
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+
+  p {
+    color: var(--text-secondary);
+    font-size: 14px;
+  }
+}
+
+.current_plan_note {
+  margin-top: 12px;
+  font-size: 13px;
+  color: var(--text-secondary);
+
+  span {
+    color: #5DCAA5;
+    font-weight: 500;
+  }
+}
+
+.section_label {
+  font-size: 11px;
+  color: var(--text-secondary);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 12px;
+}
+
+.plans_grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.plan_card {
+  background: var(--bg-secondary-color);
+  border-radius: 12px;
+  padding: 20px 16px;
+  border: 0.5px solid var(--border-light);
+  text-align: center;
+  position: relative;
+
+  &.popular {
+    border: 1.5px solid #7B5CFA;
+  }
+}
+.credit_price{
+  font-size: 14px;
+  color: #5DCAA5;
+  font-weight: 500;
+  margin-bottom:14px ;
+}
+.popular_badge {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #7B5CFA;
+  color: white;
+  font-size: 10px;
+  padding: 2px 10px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+.plan_name {
+  font-size: 12px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.plan_count {
+  font-size: 32px;
+  font-weight: 500;
+  color: var(--text-main);
+  line-height: 1;
+}
+
+.plan_unit {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  margin-top: 4px;
+  margin-bottom: 16px;
+}
+.plan_price{
+  font-size: 14px;
+  color: #5DCAA5;
+  font-weight: 500;
+  margin-bottom:14px ;
+}
+
+.plan_divider {
+  height: 0.5px;
+  background: var(--border-light);
+  margin-bottom: 14px;
+}
+
+.plan_feature {
+  font-size: 11px;
+  color: var(--text-secondary);
+  margin-bottom: 6px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  svg {
+    width: 12px;
+    height: 12px;
+    stroke: #5DCAA5;
+    fill: none;
+    stroke-width: 2;
+    flex-shrink: 0;
+  }
+
+  &.dim {
+    color: var(--text-dim);
+
+    svg { stroke: var(--text-dim); }
+  }
+}
+
+.plan_btn {
+  width: 100%;
+  padding: 9px;
+  border-radius: 8px;
+  border: none;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 14px;
+  transition: background 0.2s;
+
+  &.current {
+    background: var(--bg-tertiary-color);
+    color: var(--text-dim);
+    border: 0.5px solid var(--border-light);
+    cursor: default;
+  }
+
+  &.upgrade {
+    background: #7B5CFA;
+    color: white;
+
+    &:hover { background: #6344e0; }
+    &:disabled { opacity: 0.6; cursor: not-allowed; }
+  }
+}
+
+.credits_grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+// modal
+/* Modalning asosiy qutisini qora qilish */
+.modal_box .ant-modal-container{
+    background-color: #121212 !important; /* To'q qora fon */
+    border: 1px solid #333 !important;   /* Nozik chegara (border) */
+    border-radius: 16px !important;      /* Burchaklarni yumshatish */
+}
+
+[data-theme="light"] .modal_box .ant-modal-container {
+  background-color: var(--bg-secondary-color) !important;
+  border: 1px solid var(--border-light) !important;
+}
+
+/* Modal sarlavha qismini qora qilish */
+.modal_box .ant-modal-header {
+    background-color: #121212 !important; 
+    border-bottom: 1px solid #222 !important; /* Sarlavha ostidagi chiziq */
+}
+
+[data-theme="light"] .modal_box .ant-modal-header {
+  background-color: var(--bg-secondary-color) !important;
+  border-bottom: 1px solid var(--border-light) !important;
+}
+
+/* Sarlavha matnini oq qilish */
+.modal_box .ant-modal-title {
+    color: #ffffff !important;
+}
+
+[data-theme="light"] .modal_box .ant-modal-title {
+  color: var(--text-main) !important;
+}
+
+/* Yopish (X) tugmasini oq qilish */
+.modal_box .ant-modal-close {
+    color: #ffffff !important;
+}
+
+[data-theme="light"] .modal_box .ant-modal-close {
+  color: var(--text-main) !important;
+}
+
+/* Footer (pastki tugmalar qismi) fonini to'g'rilash */
+.modal_box .ant-modal-footer {
+    background-color: #121212 !important;
+    border-top: 1px solid #222 !important;
+}
+
+[data-theme="light"] .modal_box .ant-modal-footer {
+  background-color: var(--bg-secondary-color) !important;
+  border-top: 1px solid var(--border-light) !important;
+}
+.credit_card {
+  background: var(--bg-secondary-color);
+  border-radius: 12px;
+  padding: 16px;
+  border: 0.5px solid var(--border-light);
+  text-align: center;
+}
+
+.credit_name {
+  font-size: 11px;
+  color: var(--text-secondary);
+  margin-bottom: 6px;
+}
+
+.credit_count {
+  font-size: 26px;
+  font-weight: 500;
+  color: var(--text-main);
+}
+
+.credit_unit {
+  font-size: 10px;
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+}
+
+.credit_btn {
+  width: 100%;
+  padding: 8px;
+  border-radius: 7px;
+  border: 0.5px solid var(--border-light);
+  background: transparent;
+  color: var(--text-secondary);
+  font-size: 11px;
+  cursor: pointer;
+  transition: all 0.2s;
+
+  &:hover {
+    background: var(--bg-tertiary-color);
+    color: var(--text-main);
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+/* 1. Modal umumiy konteyneri */
+.modal_box .ant-modal-content {
+  background-color: #0f0f12 !important; /* Chuqur qora fon */
+  border: 1px solid #2d2d35 !important;
+  border-radius: 20px !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+  overflow: hidden;
+}
+
+[data-theme="light"] .modal_box .ant-modal-content {
+  background-color: var(--bg-secondary-color) !important;
+  border: 1px solid var(--border-light) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* 2. Sarlavha qismi */
+.modal_box .ant-modal-header {
+  background-color: transparent !important;
+  border-bottom: 1px solid #2d2d35 !important;
+  padding: 16px 24px !important;
+}
+
+.modal_box .ant-modal-title {
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  font-size: 1.25rem !important;
+}
+
+/* 3. Modal Body (Ichki qism) */
+.modal_box .ant-modal-body {
+  padding: 24px !important;
+}
+
+.modal-body-content {
+  color: var(--text-main);
+}
+
+/* Tanlangan tarif kartochkasi */
+.ant_body_p {
+  background: linear-gradient(145deg, #16161a, #1a1a20);
+  padding: 20px;
+  border-radius: 14px;
+  border: 1px solid #33333d;
+  margin-bottom: 24px;
+}
+
+[data-theme="light"] .ant_body_p {
+  background: var(--bg-highlight);
+  border: 1px solid var(--border-light);
+}
+
+.ant_body_p p {
+  margin: 8px 0;
+  color: #a0a0ab;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+}
+
+[data-theme="light"] .ant_body_p p {
+  color: var(--text-secondary);
+}
+
+.ant_body_p strong {
+  color: #ffffff;
+  font-size: 16px;
+}
+
+[data-theme="light"] .ant_body_p strong {
+  color: var(--text-main);
+}
+
+.ant_body_p strong:last-child {
+  color: #4ade80; /* Narx yashil rangda */
+  font-size: 20px;
+}
+
+/* 4. To'lov usullari (Radio Group) */
+.payment-radio-group {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  width: 100%;
+  margin-top: 12px;
+}
+
+.payment-radio-group .ant-radio-button-wrapper {
+  background: #16161a !important;
+  border: 1px solid #2d2d35 !important;
+  color: #a0a0ab !important;
+  height: 54px !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px !important;
+  font-weight: 500 !important;
+  transition: all 0.2s ease-in-out !important;
+}
+
+[data-theme="light"] .payment-radio-group .ant-radio-button-wrapper {
+  background: var(--bg-secondary-color) !important;
+  border: 1px solid var(--border-light) !important;
+  color: var(--text-secondary) !important;
+}
+
+/* Hover holati */
+.payment-radio-group .ant-radio-button-wrapper:hover {
+  border-color: #7c3aed !important;
+  color: #ffffff !important;
+}
+
+[data-theme="light"] .payment-radio-group .ant-radio-button-wrapper:hover {
+  color: var(--text-main) !important;
+}
+
+/* Tanlangan holati (Checked) */
+.payment-radio-group .ant-radio-button-wrapper-checked {
+  background: rgba(124, 58, 237, 0.1) !important;
+  border-color: #7c3aed !important;
+  color: #7c3aed !important;
+  box-shadow: 0 0 10px rgba(124, 58, 237, 0.2) !important;
+}
+
+/* Ant Design chizig'ini olib tashlash */
+.payment-radio-group .ant-radio-button-wrapper::before {
+  display: none !important;
+}
+
+/* 5. Footer (Tugmalar) */
+.modal_box .ant-modal-footer {
+  border-top: 1px solid #2d2d35 !important;
+  padding: 16px 24px !important;
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
+.modal_box .ant-modal-footer button {
+  height: 44px !important;
+  border-radius: 10px !important;
+  font-weight: 600 !important;
+  padding: 0 24px !important;
+}
+
+/* ==========================================
+   6. MEDIA QUERIES (Responsive)
+   ========================================== */
+
+@media (max-width: 576px) {
+  .modal_box {
+    top: 20px !important;
+    padding-bottom: 20px !important;
+  }
+
+  .modal_box .ant-modal-content {
+    margin: 0 10px !important;
+    padding: 10px !important;
+  }
+
+  .payment-radio-group {
+    grid-template-columns: 1fr; /* Mobil qurilmada bir qatorga tushadi */
+  }
+
+  .ant_body_p p {
+    font-size: 14px;
+  }
+
+  .modal_box .ant-modal-footer {
+    flex-direction: column-reverse; /* Tugmalarni ustma-ust qiladi */
+  }
+
+  .modal_box .ant-modal-footer button {
+    width: 100% !important;
+    margin-left: 0 !important;
+  }
+}
+
+/* Radio Button ichidagi konteyner */
+.provider-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 1rem; /* Rasm va yozuv orasi */
+  height: 100%;
+  width: 100% !important;
+  span{
+    font-size: 1.2rem;
+
+  }
+}
+.ant-radio-button-label{
+  width: 100% !important;
+}
+.ant-radio-button-wrapper{
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-around !important;
+}
+/* Logotip stili */
+.provider-img {
+  position: absolute;
+  top: -5px;
+  left: 0px;
+bottom: 0px;  
+  width: 4rem;   /* Rasm kengligi */
+  height: 4rem;  /* Rasm balandligi */
+  object-fit: contain; /* Rasmni buzmasdan sig'diradi */
+  filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.2)); /* Dark mode-da rasm yaxshi ko'rinishi uchun */
+}
+
+/* Ant Design'ning standart paddingini to'g'rilash */
+.provider-btn.ant-radio-button-wrapper {
+  padding: 0 15px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Tanlangan holatda rasm rangini yoki soyasini o'zgartirish (ixtiyoriy) */
+.ant-radio-button-wrapper-checked .provider-img {
+  filter: drop-shadow(0 0 5px #7C3AED);
+}

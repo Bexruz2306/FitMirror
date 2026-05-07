@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+  margin: 0px ;
+  padding: 0px ;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  text-decoration: none !important;
+
+}
+.box{
+  width: 100%;
+}
+.main{
+  width: 100%;
+  height: 100%;
+ padding: 8rem 1.5rem 0 ;
+  background-color: var(--bg-color);
+  transition: background-color 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .main {
+    padding: 7rem 0.75rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .main {
+    padding: 6.5rem 0.5rem 0;
+  }
+}
+h1 , h2, h3,p, span{
+  margin-bottom: 0px!important;
+}
+.me-auto{
+  display: flex;
+  align-items: center !important;
+  justify-content: center !important;
+  
+}
+/* Standart (Kunduzgi) rejim uchun ranglar */
+:root {
+  --back-bg: #ffffff;
+  --back-text: #1a1a1a;
+  --back-border: #e0e0e0;
+  --back-hover: #f5f5f5;
+}
+
+/* Tungi rejim uchun ranglar (Agar foydalanuvchi qorong'u rejimni yoqqan bo'lsa) */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --back-bg: #2d2d2d;
+    --back-text: #f0f0f0;
+    --back-border: #404040;
+    --back-hover: #3d3d3d;
+  }
+}
+
+/* Tugma stili */
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  background-color: var(--back-bg);
+  color: var(--back-text);
+  border: 1px solid var(--back-border);
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.back-btn:hover {
+  background-color: var(--back-hover);
+  transform: translateX(-4px);
+}
+
+.back-btn svg {
+  stroke: var(--back-text); /* Ikonka rangi ham matn bilan birga o'zgaradi */
+}
+.back-btn {
+  position: absolute;
+  top:100px;   /* Tepadan masofa */
+  left: 20px;  /* Chapdan masofa */
+  z-index: 10;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Soya */
+}

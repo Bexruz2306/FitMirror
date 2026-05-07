@@ -1,0 +1,221 @@
+{
+  "navbar": {
+    "dashboard": "Asosiy panel",
+    "try_now": "Hozir sinab ko'ring",
+    "my_account": "Mening hisobim",
+    "profile": "Profil",
+    "settings": "Sozlamalar",
+    "logout": "Chiqish",
+    "logout_success": "Siz tizimdan chiqdingiz!",
+    "login": "Kirish",
+    "pricing": "Rejalar",
+    "default_user": "Foydalanuvchi",
+    "no_email": "Email kiritilmagan"
+  },
+  "main_head": {
+    "top": "SI orqali virtual kiyib ko'rish",
+    "title": "Kiyim tanlashda boshqa xato qilmang",
+    "description": "O'z rasmingizni va har qanday kiyim rasmini yuklang. Bizning SI bir necha soniya ichida real natijani taqdim etadi.",
+    "start_trying_on": "Kiyib ko'rishni boshlash"
+  },
+  "works": {
+    "title": "Bu qanday ishlaydi",
+    "subtitle": "Oddiy, tez va hayratlanarli darajada real",
+    "step1_title": "Rasmingizni yuklang",
+    "step1_desc": "O'zingizning aniq rasmingizni yuklang. SI to'liq bo'ylama rasmlarda yaxshiroq ishlaydi.",
+    "step2_title": "Kiyimni tanlang",
+    "step2_desc": "Siz sinab ko'rmoqchi bo'lgan har qanday kiyim rasmini yuklang. Har qanday uslub va brend bilan ishlaydi.",
+    "step3_title": "SI natijasini oling",
+    "step3_desc": "Bizning SI bir necha soniya ichida natijani yaratadi. Yuklab oling va ulashing!"
+  },
+  "ready": {
+    "title": "Uslubingizni o'zgartirishga tayyormisiz?",
+    "description": "FitMirror orqali o'zining mukammal obrazini yaratayotgan minglab foydalanuvchilarga qo'shiling.",
+    "get_started": "Bepul boshlash"
+  },
+  "upload": {
+    "title": "Rasmlarni yuklang",
+    "description": "O'z rasmingizni va kiyinmoqchi bo'lgan kiyimingizni yuklang",
+    "upload_photo": "Rasmingizni yuklang",
+    "drag_drop": "Ushlab keling yoki tanlash uchun bosing",
+    "png_jpg": "PNG, JPG 10MB gacha",
+    "upload_clothing": "Kiyim rasmini yuklang",
+    "generating": "Yaratilmoqda...",
+    "generate": "SI orqali kiyib ko'rish",
+    "please_upload": "Davom etish uchun ikkala rasmni ham yuklang",
+    "cloth_size": "Kiyim o'lchami",
+    "cloth_size_s": "S (Kichik)",
+    "cloth_size_m": "M (O'rta)",
+    "cloth_size_l": "L (Katta)",
+    "cloth_size_xl": "XL (Juda katta)",
+    "fit_preference": "Kiyish uslubi",
+    "fit_slim": "Tor (Slim)",
+    "fit_regular": "O'rtacha (Regular)",
+    "fit_oversize": "Keng (Oversize)",
+    "error": "Xatolik yuz berdi, qaytadan urinib ko'ring",
+    "download_error": "Rasmni yuklab olishda xatolik yuz berdi",
+    "downloading": "Yuklanmoqda..."
+  },
+  "result": {
+    "back": "Yuklashga qaytish",
+    "complete": "✓ Bajarildi",
+    "title": "Virtual tajribangiz natijasi",
+    "description": "Sun'iy intellekt orqali tahlil qilindi",
+    "original": "Asl rasm",
+    "ai_result": "SI kiyinish natijasi",
+    "clothing_ref": "Kiyim havolasi",
+    "download": "Natijani yuklab olish",
+    "try_another": "Boshqa kiyimni sinash"
+  },
+  "profile": {
+    "title": "Sizning kiyimlaringiz",
+    "description": "Virtual kiyinish tarixingizni ko'ring va boshqaring",
+    "loading": "Yuklanmoqda...",
+    "no_data": "Ma'lumot topilmadi. Siz hali biron bir kiyim sinamadingiz.",
+    "data_button": "Hozir sinab ko'rish",
+    "time": "Vaqt",
+    "download": "Yuklab olish",
+    "delete": "O'chirish",
+    "plan_label": "Reja",
+    "generations_label": "Generatsiyalar",
+    "devices_label": "Qurilmalar",
+    "delete_success": "Muvaffaqiyatli o'chirildi",
+    "delete_error": "O'chirishda xatolik",
+    "expiry_label": "Tugaydi",
+    "unlimited": "Cheksiz",
+    "upgrade_btn": "Yangilash",
+    "alt_result": "SI natijasi",
+    "delete_confirm_title": "Elementni o'chirish",
+    "delete_confirm_desc": "Haqiqatan ham bu elementni o'chirmoqchimisiz? Bu harakatni bekor qilib bo'lmaydi."
+  },
+  "auth": {
+    "login_tab": "Kirish",
+    "register_tab": "Ro'yxatdan o'tish",
+    "email_placeholder": "Email manzili",
+    "email_required": "Emailni kiriting",
+    "password_placeholder": "Parol",
+    "password_required": "Parolni kiriting",
+    "forgot_password": "Parolni unutdingizmi?",
+    "login_button": "Kirish",
+    "or": "yoki",
+    "google_login": "Google orqali kirish",
+    "no_account": "Hisobingiz yo'qmi?",
+    "sign_up": "Ro'yxatdan o'ting",
+    "first_name": "Ism",
+    "first_name_placeholder": "Ismingizni kiriting",
+    "last_name": "Familiya",
+    "last_name_placeholder": "Familiyangizni kiriting",
+    "email_label": "Email",
+    "password_label": "Parol",
+    "min_chars": "Kamida 6 ta belgi",
+    "confirm_password": "Parolni tasdiqlang",
+    "confirm_password_placeholder": "Parolni qayta kiriting",
+    "confirm_password_required": "Parolni tasdiqlang",
+    "passwords_mismatch": "Parollar mos kelmadi",
+    "register_button": "Ro'yxatdan o'tish",
+    "have_account": "Hisobingiz bormi?",
+    "sign_in": "Kirish",
+    "register_success": "Ro'yxatdan o'tish yakunlandi! Tizimga kiring.",
+    "welcome": "Xush kelibsiz!",
+    "error_occurred": "Xatolik yuz berdi",
+    "sidebar_subtitle": "Virtual kiyib ko'rish tajribasi",
+    "login_required": "Iltimos, avval tizimga kiring yoki ro'yxatdan o'ting!",
+    "google_error": "Google orqali kirishda xatolik",
+    "google_service_error": "Google xizmati xatoligi",
+    "login_subtitle": "Xush kelibsiz",
+    "coming_soon": "Tez kunda"
+  },
+  "footer": {
+    "privacy": "Maxfiylik",
+    "terms": "Shartlar",
+    "contact": "Aloqa",
+    "feedback": "Fikr-mulohaza"
+  },
+  "feedback": {
+    "title": "Fikringizni yuboring",
+    "placeholder": "Fikr va takliflaringizni ulashing...",
+    "submit": "Yuborish",
+    "cancel": "Bekor qilish",
+    "success": "Fikringiz uchun tashakkur!",
+    "error": "Yuborishda xatolik yuz berdi",
+    "email_placeholder": "Emailingiz (ixtiyoriy)"
+  },
+  "pricing": {
+    "title": "Tarif rejalarimiz",
+    "subtitle": "Sizning ehtiyojingizga mos rejani tanlang",
+    "current_plan": "Amaldagi reja",
+    "used": "ishlatildi",
+    "monthly_plans": "Oylik rejalar",
+    "popular": "Ommabop",
+    "per_month": "oyiga",
+    "feature_generate": "SI orqali kiyib ko'rish",
+    "feature_history": "Tarixga kirish",
+    "feature_priority": "Ustuvor ishlov berish",
+    "active_plan": "Faol",
+    "upgrade": "Yangilash",
+    "upgrade_btn": "Yangilash",
+    "credit_packs": "Kredit paketlari",
+    "generations": "generatsiyalar",
+    "generations_count": "generatsiyalar",
+    "buy": "Sotib olish",
+    "buy_now": "Hozir sotib olish",
+    "not_implemented": "Hali joriy etilmadi",
+    "payment_confirm": "To'lovni tasdiqlash",
+    "cancel": "Bekor qilish",
+    "pay_now": "To'lash",
+    "selected_plan": "Tanlangan reja",
+    "price": "Narxi",
+    "select_payment_method": "To'lov usulini tanlang",
+    "payment_redirect": "To'lov sahifasiga yo'naltirilmoqda...",
+    "payment_error": "To'lovda xatolik",
+    "plans": {
+      "FREE": "Bepul",
+      "PLUS": "Plus",
+      "PRO": "Pro",
+      "PRIME": "Prime"
+    },
+    "packs": {
+      "SINGLE": "Yagona",
+      "MINI": "Mini",
+      "BASIC": "Baza",
+      "POWER": "Maksimal"
+    }
+  },
+  "outfit": {
+    "title": "Uslub bo'yicha tavsiyalar",
+    "buy_now": "Sotib olish",
+    "contact": "Do'kon bilan bog'lanish"
+  },
+  "common": {
+    "loading": "Yuklanmoqda...",
+    "not_available": "Mavjud emas",
+    "yes": "Ha",
+    "no": "Yo'q",
+    "loading_dots": "Yuklanmoqda..."
+  },
+  "settings": {
+    "title": "Ulangan qurilmalar",
+    "count": "{{count}} ta qurilma",
+    "error": "Qurilmalarni yuklab bo'lmadi",
+    "retry": "Qayta urinish",
+    "empty": "Hech qanday qurilma topilmadi",
+    "logout_all": "Barcha qurilmalardan chiqish",
+    "device": {
+      "current_badge": "Joriy qurilma",
+      "unknown": "Noma'lum qurilma",
+      "logout_btn": "Chiqarish",
+      "logging_out": "Chiqarilmoqda..."
+    },
+    "confirm_modal": {
+      "title": "Qurilmani chiqarish",
+      "description": "Bu qurilma hisobdan chiqariladi. Keyingi kirishda parol talab qilinadi.",
+      "cancel": "Bekor qilish",
+      "confirm": "Chiqarish"
+    },
+    "errors": {
+      "logout_fail": "Qurilmani chiqarib bo'lmadi"
+    }
+  
+},"back_button": "Orqaga"
+
+}

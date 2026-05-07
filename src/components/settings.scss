@@ -1,0 +1,341 @@
+// settings.scss
+
+.settings {
+    width: 100% !important;
+    padding: 32px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 5rem;
+    height: 84vh !important;
+    
+    background-color: #000000; // Toza qora fon
+    color: #ffffff;
+
+    &__section {
+        width: 100%;;
+        max-width: 600px;
+        background: #0a0a0a; // Juda to'q kulrang/qora
+        border: 1px solid #262626; // Chegaralar biroz ko'rinishi uchun
+        border-radius: 14px;
+        overflow: hidden;
+    }
+
+    &__section-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 16px 20px;
+        border-bottom: 1px solid #262626;
+        color: #ffffff !important;
+    }
+
+    &__section-title {
+        font-size: 15px;
+        font-weight: 600;
+        margin: 0;
+        color: #ffffff;
+    }
+
+    &__section-count {
+        font-size: 12px;
+        background: #1f2937; // To'q ko'k-kulrang badge
+        color: #ffffff;
+        padding: 3px 10px;
+        border-radius: 20px;
+    }
+
+    &__device-list {
+        padding: 0;
+        background: transparent;
+    }
+
+    &__error {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 12px 16px 4px;
+        padding: 10px 14px;
+        background: #450a0a; // To'q qizil fon (error uchun)
+        border: 1px solid #7f1d1d;
+        border-radius: 8px;
+        font-size: 13px;
+        color: #fecaca;
+
+        button {
+            font-size: 12px;
+            color: #f87171;
+            background: none;
+            border: none;
+            cursor: pointer;
+            text-decoration: underline;
+            padding: 0;
+            white-space: nowrap;
+            margin-left: 12px;
+        }
+    }
+
+    &__empty {
+        padding: 40px 20px;
+        text-align: center;
+        color: #6b7280;
+        font-size: 14px;
+    }
+
+    &__logout-all {
+        display: block;
+        width: calc(100% - 32px);
+        margin: 8px 16px 16px;
+        padding: 11px;
+        background: transparent;
+        border: 1px solid #7f1d1d;
+        border-radius: 8px;
+        color: #f87171;
+        font-size: 13px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.2s;
+
+        &:hover {
+            background: #450a0a;
+            border-color: #f87171;
+        }
+    }
+}
+
+// ─── Device row ───────────────────────────────────────────────────────────────
+.device-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 20px;
+    border-bottom: 1px solid #262626;
+    transition: background 0.15s;
+    background: transparent;
+
+    &:last-child {
+        border-bottom: none;
+    }
+
+    &:hover {
+        background: #171717; // Hoverda biroz ochroq qora
+    }
+
+    &--current {
+        background: #064e3b; // To'q yashil (Current device)
+        border-left: 4px solid #10b981;
+
+        &:hover {
+            background: #065f46;
+        }
+
+        .device-row__icon {
+            color: #10b981;
+            background: #022c22;
+        }
+
+        .device-row__badge {
+            background: #10b981;
+            color: #ffffff;
+        }
+    }
+
+    &--skeleton {
+        pointer-events: none;
+        background: transparent;
+    }
+
+    &__icon {
+        width: 42px;
+        height: 42px;
+        border-radius: 10px;
+        background: #1f2937;
+        color: #9ca3af;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+    }
+
+    &__info {
+        flex: 1;
+        min-width: 0;
+    }
+
+    &__name {
+        font-size: 14px;
+        font-weight: 500;
+        color: #ffffff;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin-bottom: 4px;
+    }
+
+    &__badge {
+        font-size: 10px;
+        font-weight: 600;
+        color: #10b981;
+        background: #022c22;
+        padding: 2px 8px;
+        border-radius: 20px;
+        text-transform: uppercase;
+    }
+
+    &__meta {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 12px;
+        color: #9ca3af;
+    }
+
+    &__dot {
+        width: 3px;
+        height: 3px;
+        border-radius: 50%;
+        background: #4b5563;
+    }
+
+    &__logout {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        padding: 8px 14px;
+        background: #1f2937;
+        border: 1px solid #374151;
+        border-radius: 8px;
+        color: #d1d5db;
+        font-size: 12px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.2s;
+
+        &:hover:not(:disabled) {
+            background: #7f1d1d;
+            border-color: #f87171;
+            color: #ffffff;
+        }
+
+        &:disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+        }
+    }
+}
+
+// ─── Skeleton (Yuklanish effekti) ──────────────────────────────────────────────
+.skeleton {
+    // Dark mode uchun moslangan shimmer
+    background: linear-gradient(90deg, #1f2937 25%, #374151 50%, #1f2937 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.4s infinite;
+    border-radius: 6px;
+
+    &--icon {
+        width: 42px;
+        height: 42px;
+    }
+
+    &--name {
+        width: 140px;
+        height: 14px;
+    }
+
+    &--meta {
+        width: 200px;
+        height: 12px;
+    }
+}
+
+@keyframes shimmer {
+    0%   { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+// ─── Confirm modal ────────────────────────────────────────────────────────────
+.confirm-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8); // Modal orqasi to'qroq
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    padding: 20px;
+    backdrop-filter: blur(4px); // Orqani xiralashtirish (chiroyli chiqadi)
+}
+
+.confirm-modal {
+    background: #171717; // To'q modal foni
+    border: 1px solid #262626;
+    border-radius: 16px;
+    padding: 28px 24px 24px;
+    width: 100%;
+    max-width: 320px;
+    text-align: center;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+
+    &__icon {
+        width: 52px;
+        height: 52px;
+        border-radius: 14px;
+        background: #450a0a;
+        color: #f87171;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 16px;
+    }
+
+    &__title {
+        font-size: 16px;
+        font-weight: 600;
+        color: #ffffff;
+        margin: 0 0 8px;
+    }
+
+    &__desc {
+        font-size: 13px;
+        color: #9ca3af;
+        line-height: 1.6;
+        margin: 0 0 22px;
+    }
+
+    &__actions {
+        display: flex;
+        gap: 10px;
+    }
+
+    &__cancel {
+        flex: 1;
+        padding: 10px;
+        background: #262626;
+        border: none;
+        border-radius: 8px;
+        font-size: 14px;
+        font-weight: 500;
+        color: #d1d5db;
+        cursor: pointer;
+
+        &:hover {
+            background: #333333;
+        }
+    }
+
+    &__confirm {
+        flex: 1;
+        padding: 10px;
+        background: #dc2626;
+        border: none;
+        border-radius: 8px;
+        font-size: 14px;
+        font-weight: 500;
+        color: #fff;
+        cursor: pointer;
+
+        &:hover {
+            background: #b91c1c;
+        }
+    }
+}
